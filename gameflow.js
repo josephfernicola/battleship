@@ -130,7 +130,7 @@ function declareWinner() {
     submarineComputerHits.length == 3 &&
     destroyerComputerHits.length == 2
   ) {
-    getWinnerModalPopup();
+    getUserWinnerModalPopup();
   } else if (
     carrierUserHits.length == 5 &&
     battleshipUserHits.length == 4 &&
@@ -138,28 +138,55 @@ function declareWinner() {
     submarineUserHits.length == 3 &&
     destroyerUserHits.length == 2
   ) {
-    getWinnerModalPopup();
+    getComputerWinnerModalPopup();
   }
 }
-function getWinnerModalPopup() {
+function getUserWinnerModalPopup() {
   const winnerModalPopup = document.createElement("div");
   winnerModalPopup.classList.add("winnerModalPopup");
   const winnerModalPopupContainer = document.createElement("div");
   winnerModalPopupContainer.classList.add("winnerModalPopupContainer");
+  const winnerModalHeader = userWinHeader();
+  const refresh = getRefreshButton();
+  document.body.appendChild(winnerModalPopup);
+  winnerModalPopup.appendChild(winnerModalPopupContainer);
+  winnerModalPopupContainer.appendChild(winnerModalHeader);
+  winnerModalPopupContainer.appendChild(refresh);
+}
 
-  const winnerModalHeader = document.createElement("h1");
-  winnerModalHeader.classList.add("winnerModalHeader");
-  winnerModalHeader.textContent = "You Won";
-
+function getRefreshButton() {
   const refresh = document.createElement("button");
   refresh.classList.add("refresh");
   refresh.textContent = "Play Again";
   refresh.addEventListener("click", () => {
     window.location.href = window.location.href;
   });
+  return refresh;
+}
 
+function getComputerWinnerModalPopup() {
+  const winnerModalPopup = document.createElement("div");
+  winnerModalPopup.classList.add("winnerModalPopup");
+  const winnerModalPopupContainer = document.createElement("div");
+  winnerModalPopupContainer.classList.add("winnerModalPopupContainer");
+  const winnerModalHeader = computerWinHeader();
+  const refresh = getRefreshButton();
   document.body.appendChild(winnerModalPopup);
   winnerModalPopup.appendChild(winnerModalPopupContainer);
   winnerModalPopupContainer.appendChild(winnerModalHeader);
   winnerModalPopupContainer.appendChild(refresh);
+}
+
+function userWinHeader() {
+  const winnerModalHeader = document.createElement("h1");
+  winnerModalHeader.classList.add("winnerModalHeader");
+  winnerModalHeader.textContent = "You Won";
+  return winnerModalHeader;
+}
+
+function computerWinHeader() {
+  const winnerModalHeader = document.createElement("h1");
+  winnerModalHeader.classList.add("winnerModalHeader");
+  winnerModalHeader.textContent = "You Lost";
+  return winnerModalHeader;
 }
