@@ -30,7 +30,7 @@ function attackComputer() {
       if (square.className.includes("Destroyer")) {
         destroyerComputerHits.push("hit");
       }
-    });
+    }, {once : true});
   });
 }
 
