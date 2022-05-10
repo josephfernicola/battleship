@@ -175,7 +175,7 @@ function battleshipHorizontalClick(evt) {
       i++
     ) {
       if (modalSquare[i]) {
-        modalSquare[i].classList.add("battlsehip");
+        modalSquare[i].classList.add("battleship");
       }
     }
     removeHorizontalBattleshipEventListeners();
@@ -252,16 +252,9 @@ function cruiserHorizontalClick(evt) {
     newModalArray.indexOf(evt.currentTarget) < 96 &&
     evt.currentTarget.nextElementSibling.id !== "firstRow" &&
     evt.currentTarget.nextElementSibling.nextElementSibling.id !== "firstRow" &&
-    evt.currentTarget.nextElementSibling.nextElementSibling.nextElementSibling
-      .id !== "firstRow" &&
-    evt.currentTarget.nextElementSibling.nextElementSibling.nextElementSibling
-      .nextElementSibling.id !== "firstRow" &&
     evt.currentTarget.classList.length < 2 &&
     evt.currentTarget.nextElementSibling.classList.length < 2 &&
-    evt.currentTarget.nextElementSibling.nextElementSibling.classList.length <
-      2 &&
-    evt.currentTarget.nextElementSibling.nextElementSibling.nextElementSibling
-      .classList.length < 2
+    evt.currentTarget.nextElementSibling.nextElementSibling.classList.length < 2
   ) {
     for (
       let i = newModalArray.indexOf(evt.currentTarget);
