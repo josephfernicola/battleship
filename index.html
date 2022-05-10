@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Battleship!</title>
+  </head>
+  <body>
+    <h1 class="header">Battleship</h1>
+    <div class="board-container">
+      <div class="player-board"></div>
+      <div class="computer-board"></div>
+      <h2 class="player-title">You</h2>
+      <h2 class="computer-title">Computer</h2>
+    </div>
+    <div class="modal-popup">
+      <div class="modal-container">
+          <h1 class="modal-title">Welcome to Battleship Game</h1>
+        <span class="modal-header">Place Your Carrier (5 spots)</span>
+        <button class="rotate-button">Rotate</button>
+        <div class="modal-board"></div>
+      </div>
+    </div>
+
+    <script src="boardLayout.js"></script>
+    <script src="modalLayout.js"></script>
+    <script src="placeShipsOnComputerBoard.js"></script>
+    <script src="gameflow.js"></script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+body {
+  background-color: #678da0;
+}
+
+.header {
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Righteous", cursive;
+  font-size: 80px;
+  margin-bottom: 100px;
+}
+
+.player-board,
+.modal-board {
+  display: grid;
+  grid-template-columns: repeat(10, 33px);
+  border: 1px solid black;
+}
+
+.player-board {
+    margin-left: 300px;
+}
+
+.computer-board {
+  display: grid;
+  grid-template-columns: repeat(10, 33px);
+  border: 1px solid black;
+  margin-right: 300px;
+}
+
+.board-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+
+}
+
+.playerSquare,
+.computerSquare,
+.modalSquare {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+}
+
+.modal-container {
+  background-color: #678da0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s;
+}
+.modal-header {
+  margin-bottom: 50px;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.carrier,
+.battleship,
+.cruiser,
+.submarine,
+.destroyer {
+  background-color: rgb(71, 70, 70);
+}
+
+.rotate-button {
+  margin-bottom: 30px;
+  border: none;
+  height: 50px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-family: "Righteous", cursive;
+  border-radius: 5px;
+}
+.rotate-button:hover {
+    cursor: pointer;
+    transform: scale(1.1); 
+}
+
+.modalSquare:hover,
+.computerSquare:hover {
+  cursor: pointer;
+}
+.computerSquare:hover {
+  background-color: rgb(61, 56, 56);
+}
+
+.player-title {
+    margin-left: 300px;
+    font-family: "Righteous", cursive;
+}
+
+.computer-title {
+    margin-right: 300px;
+    font-family: "Righteous", cursive;
+}
+
+.modal-title, .modal-header {
+    font-family: "Righteous", cursive;
+}
