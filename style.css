@@ -76,14 +76,14 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0s, opacity 0.5s;
 }
+
 .modal-header {
   margin-bottom: 50px;
   margin-top: 20px;
   font-size: 25px;
+  font-family: 'Raleway' , sans-serif;
+  font-weight: 500;
 }
 
 .winnerModalHeader {
@@ -141,7 +141,6 @@ body {
 }
 
 .modal-title,
-.modal-header,
 .winnerModalHeader,
 .refresh {
   font-family: "Righteous", cursive;
