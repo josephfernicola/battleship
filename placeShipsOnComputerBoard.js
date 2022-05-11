@@ -250,7 +250,6 @@ function randomlyPutHorizontalDestroyerOnComputerBoard() {
     computerSquare[horizontalNumber].classList.length > 1 ||
     computerSquare[horizontalNumber].nextElementSibling.classList.length > 1
   );
-  console.log("destroyer", horizontalNumber);
   for (
     let i = newComputerArray.indexOf(horizontalNumber);
     i < newComputerArray.indexOf(horizontalNumber) + 2;

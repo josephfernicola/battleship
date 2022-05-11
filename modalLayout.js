@@ -108,8 +108,6 @@ function placeHorizontalBattleshipOnModal() {
     square.addEventListener("click", battleshipHorizontalClick);
   });
 }
-
-//when one ship is at end, fix issue with hovering over it and wrapping around
 function battleshipHorizontalHover(evt) {
   const modalSquare = document.querySelectorAll(".modalSquare");
   const newModalArray = Array.prototype.slice.call(modalSquare);
@@ -443,7 +441,7 @@ function destroyerHorizontalClick(evt) {
     rotateButton.removeEventListener("click", rotateDestroyer);
 
     modalSquare.forEach((square) => {
-      //to disable the cursor:pointer over the square
+      //to disable the cursor:pointer over the user's squares
       square.classList.remove("modalSquare");
       square.classList.add("playerSquare");
       playerBoard.appendChild(square);
@@ -631,7 +629,6 @@ function battleshipVerticalClick(evt) {
   horizontal = true;
   const modalSquare = document.querySelectorAll(".modalSquare");
   const newModalArray = Array.prototype.slice.call(modalSquare);
-  console.log(modalSquare[newModalArray.indexOf(evt.currentTarget) + 10]);
   if (
     //this prevents any placement of ship off the board
     newModalArray.indexOf(evt.currentTarget) + 10 < 100 &&
@@ -958,7 +955,7 @@ function destroyerVerticalClick(evt) {
     rotateButton.removeEventListener("click", rotateDestroyer);
 
     modalSquare.forEach((square) => {
-      //to disable the cursor:pointer over the square
+      //to disable the cursor:pointer over the user's squares
       square.classList.remove("modalSquare");
       square.classList.add("playerSquare");
       playerBoard.appendChild(square);

@@ -53,7 +53,7 @@ attackComputer();
 
 let newAttackOnUser;
 let previousAttacksOnUser = []; //storing all attacks the computer has made
-let newPlayerArray = [];
+let newPlayerArray = []; //used for indexOf for nodelist of squares on the board
 
 function attackThePlayerBoard() {
   const playerSquare = document.querySelectorAll(".playerSquare");
